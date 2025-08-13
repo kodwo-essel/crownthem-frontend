@@ -2,7 +2,7 @@
 export default function CategoryCard() {
   return (
     <div>
-        <div className="max-h-40 bg-white border border-gray-200 rounded-xl py-4 px-6 hover:shadow-lg hover:border-accent transition-all duration-300 cursor-pointer">
+        <div className="max-h-40 bg-white border border-gray-200 rounded-sm py-4 px-6 hover:shadow-lg hover:border-accent transition-all duration-300 cursor-pointer">
             <div className="flex items-center justify-between mb-2">
                 <h3 className="text-xl font-semibold text-primary group-hover:text-accent transition-colors">Financial Technology</h3>
                 <i className="ri-arrow-right-line text-gray-400 group-hover:text-accent transition-colors"></i>

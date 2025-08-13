@@ -26,7 +26,7 @@ export default function AccordionItem() {
         }`}
       >
         <div className="px-6 pb-5">
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 text-left leading-relaxed">
             Our voting system uses enterprise-grade encryption, blockchain
             verification, and multi-layer security protocols to ensure complete
             transparency and prevent fraud. Each vote is cryptographically

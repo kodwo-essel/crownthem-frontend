@@ -5,7 +5,9 @@
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   will-change: filter;
   transition: filter 300ms;
 }

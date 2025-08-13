@@ -1,5 +1,5 @@
 import { Button } from "../ui/button"
-import { Menu } from "lucide-react"
+import { Menu, PhoneCall } from "lucide-react"
 import { useState } from "react"
 
 export default function Navbar() {
@@ -7,7 +7,7 @@ export default function Navbar() {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Events", href: "/events" },
+    { label: "Events", href: "/voting-events" },
     { label: "Tickets", href: "/tickets" },
     { label: "About", href: "/about" },
     { label: "Solutions", href: "/solutions" },
@@ -24,8 +24,8 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="w-screen top-0 z-50">
-      <div className="flex justify-between items-center w-screen px-16 shadow-[0_1px_6px_rgba(0,0,0,0.15)]">
+    <nav className="top-0 z-50">
+      <div className="flex justify-between items-center px-4 sm:px-16 shadow-[0_1px_6px_rgba(0,0,0,0.15)]">
         
         {/* Logo */}
         <div className="logo">
@@ -50,8 +50,9 @@ export default function Navbar() {
 
         {/* CTA Buttons */}
         <div className="cta hidden md:flex gap-2">
-          <Button className="w-24 cursor-pointer transform transition-shadow duration-500 ease-in-out hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
-            Contact us
+          <Button className="w-24 cursor-pointer transform  transition-all duration-500 ease-in-out hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:scale-105">
+            Contact
+            <PhoneCall size={16} />
           </Button>
         </div>
 
@@ -95,12 +96,13 @@ export default function Navbar() {
               isOpen
                 ? `opacity-100 translate-y-0 scale-100`
                 : "opacity-0 translate-y-8 scale-95"
-            } hover:scale-110 cursor-pointer`}
+            } hover:scale-105 cursor-pointer`}
             style={{
               transitionDelay: isOpen ? `${menuItems.length * 150 + 100}ms` : '0ms'
             }}
           >
-            Contact us
+            Contact
+            <PhoneCall size={16} />
           </Button>
         </div>
       </div>

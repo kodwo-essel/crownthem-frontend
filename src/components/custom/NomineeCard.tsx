@@ -3,7 +3,7 @@ import { Button } from "../ui/button"
 export default function NomineeCard() {
   return (
     <div>
-      <div className="group relative w-70 h-80 p-0 rounded-lg overflow-hidden border-none shadow-none">
+      <div className="group relative w-full h-80 p-0 rounded-lg overflow-hidden border-none shadow-none">
         <img
           className="w-full h-full object-cover object-top transform transition-transform duration-500 ease-in-out group-hover:scale-105"
           src="https://cdn.pixabay.com/photo/2022/09/12/17/39/man-7450033_1280.jpg"
@@ -11,7 +11,7 @@ export default function NomineeCard() {
         />
 
         {/* Candidate code top right */}
-        <div className="absolute top-2 right-2 px-2 py-1 bg-secondary bg-opacity-60 text-white text-xs font-bold rounded-lg">
+        <div className="absolute top-2 right-2 px-2 py-1 bg-accent bg-opacity-60 text-white text-xs font-bold rounded-lg">
           ABC123
         </div>
 

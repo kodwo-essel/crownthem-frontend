@@ -1,18 +1,39 @@
-import './App.css'
-import Navbar from './components/custom/Navbar'
-import Footer from './components/custom/Footer'
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/custom/Navbar';
+import Footer from './components/custom/Footer';
+import Landing from './pages/Landing';
+import Event from './pages/Event';
+import VotingEvents from './pages/VotingEvents';
+import Category from './pages/Category';
 
 function App() {
-
   return (
-    <div className="flex min-h-svh flex-col">
-      <Navbar/>
-      <main className="flex-1">
-        {/* Page content goes here */}
-      </main>
-      <Footer/>
-    </div>
-  )
+    <BrowserRouter>
+      <div className="flex min-h-svh flex-col">
+        <Navbar />
+
+        <main className="flex-1">
+          <Routes>
+            {/* Home page */}
+            <Route path="/" element={<Landing />} />
+            <Route path="/home" element={<Landing />} />
+
+            {/* Voting Events listing */}
+            <Route path="/voting-events" element={<VotingEvents />} />
+
+            {/* Single event details */}
+            <Route path="/voting-events/:eventId" element={<Event />} />
+
+            {/* Event category */}
+            <Route path="/voting-events/:eventId/:categoryId" element={<Category />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
