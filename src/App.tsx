@@ -6,6 +6,8 @@ import Landing from './pages/Landing';
 import Event from './pages/Event';
 import VotingEvents from './pages/VotingEvents';
 import Category from './pages/Category';
+import NomineeVoting from './pages/NomineeVoting';
+import VotingSuccessful from './pages/VotingSuccessful';
 
 function App() {
   return (
@@ -27,6 +29,11 @@ function App() {
 
             {/* Event category */}
             <Route path="/voting-events/:eventId/:categoryId" element={<Category />} />
+
+            {/* Nominee voting */}
+            <Route path="/voting-events/:eventId/:categoryId/:nomineeId" element={<NomineeVoting />} />
+
+            <Route path="/voting-success" element={<VotingSuccessful />} />
           </Routes>
         </main>
 

@@ -17,8 +17,8 @@ export default function Event() {
         <EventBanner />
 
         <div className="max-w-6xl mx-auto px-6 py-6">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <a className="hover:text-accent transition-colors" href="/">Voting</a>
+          <div className="flex flex-wrap overflow-x-auto items-center gap-2 text-sm text-gray-600">
+            <a className="hover:text-accent transition-colors" href="/voting-events">Voting</a>
             <i className="ri-arrow-right-s-line"></i>
             <span className="text-primary font-medium">Global Sustainability Summit</span>
           </div>

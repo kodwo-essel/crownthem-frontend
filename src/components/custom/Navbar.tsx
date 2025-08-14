@@ -1,6 +1,7 @@
 import { Button } from "../ui/button"
 import { Menu, PhoneCall } from "lucide-react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,12 +30,12 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="logo">
-          <a
+          <Link
             className="text-2xl font-['Pacifico'] text-primary hover:opacity-80 transition-opacity"
-            href="/"
+            to="/"
           >
             SpotLite
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Links */}
@@ -42,7 +43,7 @@ export default function Navbar() {
           <ul className="flex gap-8">
             {menuItems.map(item => (
               <li className="hover:text-accent hover:scale-115 transition-transform duration-300 ease-in-out" key={item.label}>
-                <a href={item.href}>{item.label}</a>
+                <Link to={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
@@ -73,9 +74,9 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-center gap-6 py-8">
           {menuItems.map((item, i) => (
-            <a
+            <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className={`transform transition-all duration-700 ease-out ${
                 isOpen
                     ? `opacity-100 translate-y-0 scale-100 ${delayClasses[i] || 'delay-[100ms]'}`
@@ -88,7 +89,7 @@ export default function Navbar() {
                 <span className="inline-block hover:text-accent hover:scale-115 transition-transform duration-300 ease-in-out">
                 {item.label}
                 </span>
-            </a>
+            </Link>
             ))}
 
           <Button

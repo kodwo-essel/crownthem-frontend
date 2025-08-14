@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2 flex flex-col items-start">
-                        <a className="text-6xl font-['Pacifico'] text-white hover:opacity-80 transition-opacity mb-8" href="/">SpotLite</a>
+                        <Link className="text-6xl font-['Pacifico'] text-white hover:opacity-80 transition-opacity mb-8" to="/">SpotLite</Link>
                         {/* <p className="mt-4 text-gray-300 text-left max-w-md">Elite Events
                             Redefined.</p> */}
                         <div className="flex space-x-4 mt-6">
@@ -27,13 +28,13 @@ export default function Footer() {
                     <div className="text-left">
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="space-y-3">
-                            <li><a className="text-gray-300 hover:text-accent transition-colors" href="/preview/a0e91f6a-22d2-4342-a603-2be6c9c44b57/1705122/voting">Event Voting</a></li>
+                            <li><Link className="text-gray-300 hover:text-accent transition-colors" to="/voting-events">Event Voting</Link></li>
                             
-                            <li><a className="text-gray-300 hover:text-accent transition-colors" href="/preview/a0e91f6a-22d2-4342-a603-2be6c9c44b57/1705122/ticketing">Ticketing Solutions</a></li>
+                            <li><Link className="text-gray-300 hover:text-accent transition-colors" to="/ticket-events">Ticketing Solutions</Link></li>
                             
-                            <li><a className="text-gray-300 hover:text-accent transition-colors" href="/preview/a0e91f6a-22d2-4342-a603-2be6c9c44b57/1705122/solutions">Custom Solutions</a></li>
+                            <li><Link className="text-gray-300 hover:text-accent transition-colors" to="/solutions">Custom Solutions</Link></li>
                             
-                            <li><a href="/" className="text-gray-300 hover:text-accent transition-colors">Event Analytics</a></li>
+                            <li><Link to="/" className="text-gray-300 hover:text-accent transition-colors">Event Analytics</Link></li>
 
                         </ul>
                     </div>
