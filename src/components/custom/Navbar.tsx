@@ -9,7 +9,7 @@ export default function Navbar() {
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "Events", href: "/voting-events" },
-    { label: "Tickets", href: "/tickets" },
+    { label: "Tickets", href: "/ticket-events" },
     { label: "About", href: "/about" },
     { label: "Solutions", href: "/solutions" },
   ]

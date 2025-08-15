@@ -1,6 +1,6 @@
 import { useState } from "react";
-import EventCard from "@/components/custom/EventCard";
 import { ArrowLeft } from "lucide-react";
+import TicketEventCard from "@/components/custom/TicketEventCard";
 import {
   Pagination,
   PaginationContent,
@@ -11,7 +11,9 @@ import {
 } from "@/components/ui/pagination";
 import SearchBar from "@/components/custom/SearchBar"; // import your search bar
 
-export default function VotingEvents() {
+import { Link } from "react-router-dom";
+
+export default function TicketEvents() {
   const allEvents = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     name: `Event ${i + 1}`,
@@ -30,7 +32,7 @@ export default function VotingEvents() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentEvents = filteredEvents
     .slice(startIndex, startIndex + itemsPerPage)
-    .map(event => <a href="voting-events/{event.id}" key={event.id}><EventCard key={event.id} /></a>);
+    .map(event => <Link to="/ticket-events/{event.id}" key={event.id}><TicketEventCard key={event.id} /></Link>);
 
   return (
     <div>
@@ -42,11 +44,10 @@ export default function VotingEvents() {
 
         <div className="text-center pt-12 mb-6">
           <h2 className="text-4xl md:text-5xl font-bold text-[#131D4F] mb-4">
-            Awards & Voting Events
+            Buy your favorite events' tickets
           </h2>
           <p className="text-xl text-gray-600 mb-6">
-            Participate in prestigious award ceremonies and make your voice
-            heard by voting for outstanding nominees.
+            Purchase tickets for your favorite events with ease. All you  need in one place.
           </p>
 
           {/* Search Bar */}
