@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EventCard from "@/components/custom/EventCard";
+import EventCardSkeleton from "@/components/skeleton/EventCardSkeleton";
 import { ArrowLeft } from "lucide-react";
 import {
   Pagination,
@@ -9,28 +10,48 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import SearchBar from "@/components/custom/SearchBar"; // import your search bar
+import SearchBar from "@/components/custom/SearchBar";
+import { fetchEvents, searchEvents } from "@/services/eventService";
+import type { EventItem } from "@/types";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function VotingEvents() {
-  const allEvents = Array.from({ length: 20 }, (_, i) => ({
-    id: i,
-    name: `Event ${i + 1}`,
-  }));
-
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | undefined>(undefined);
+  const [events, setEvents] = useState<EventItem[]>([]);
+  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(false);
 
-  // Filter events by search term
-  const filteredEvents = allEvents.filter(event =>
-    event.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const debouncedSearch = useDebounce(searchTerm, 500);
 
-  const totalPages = Math.ceil(filteredEvents.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentEvents = filteredEvents
-    .slice(startIndex, startIndex + itemsPerPage)
-    .map(event => <a href="voting-events/{event.id}" key={event.id}><EventCard key={event.id} /></a>);
+  useEffect(() => {
+    async function loadEvents() {
+      setLoading(true);
+      try {
+        let page;
+        if (debouncedSearch || statusFilter) {
+          page = await searchEvents(
+            debouncedSearch,
+            statusFilter,
+            currentPage - 1,
+            itemsPerPage
+          );
+        } else {
+          page = await fetchEvents(currentPage - 1, itemsPerPage);
+        }
+        setEvents(page.content);
+        setTotalPages(page.totalPages);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadEvents();
+  }, [currentPage, debouncedSearch, statusFilter]);
 
   return (
     <div>
@@ -40,6 +61,7 @@ export default function VotingEvents() {
           <p className="text-primary font-semibold">Back</p>
         </a>
 
+        {/* Heading */}
         <div className="text-center pt-12 mb-6">
           <h2 className="text-4xl md:text-5xl font-bold text-[#131D4F] mb-4">
             Awards & Voting Events
@@ -49,22 +71,50 @@ export default function VotingEvents() {
             heard by voting for outstanding nominees.
           </p>
 
-          {/* Search Bar */}
-          <div className="flex mt-12 mb-12 justify-center">
+          {/* Search & Filter */}
+          <div className="flex flex-col md:flex-row mt-12 mb-12 gap-4 justify-center">
             <SearchBar
               value={searchTerm}
-              onChange={setSearchTerm}
+              onChange={(val) => {
+                setSearchTerm(val);
+                setCurrentPage(1);
+              }}
               onSearch={() => setCurrentPage(1)}
             />
+            <select
+              value={statusFilter ?? ""}
+              onChange={(e) => {
+                setStatusFilter(e.target.value || undefined);
+                setCurrentPage(1);
+              }}
+              className="border rounded-lg px-4 py-2 text-gray-600"
+            >
+              <option value="">All Status</option>
+              <option value="DRAFT">Draft</option>
+              <option value="NOMINATION_OPEN">Nomination Open</option>
+              <option value="NOMINATION_CLOSED">Nomination Closed</option>
+              <option value="VOTING_OPEN">Voting Open</option>
+              <option value="VOTING_CLOSED">Voting Closed</option>
+              <option value="COMPLETED">Completed</option>
+            </select>
           </div>
         </div>
 
+        {/* Events grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {currentEvents}
+          {loading
+            ? Array.from({ length: itemsPerPage }).map((_, i) => (
+                <EventCardSkeleton key={i} />
+              ))
+            : events.map((event) => (
+                <a key={event.id} href={`/voting-events/${event.id}`}>
+                  <EventCard {...event} />
+                </a>
+              ))}
         </div>
 
         {/* Pagination */}
-        {totalPages > 1 && (
+        {!loading && totalPages > 1 && (
           <div className="flex justify-center mt-12">
             <Pagination>
               <PaginationContent>

@@ -1,32 +1,87 @@
+import type { EventItem } from "@/types";
 
-export default function EventBanner() {
+export default function EventBanner({ name,
+    imageUrl,
+    votingStart,
+    votingEnd,
+    nominationStart,
+    nominationEnd,
+    status, }: Readonly<EventItem>) {
+
+  // Format dates nicely
+  const formatDate = (dateString: string) =>
+    new Date(dateString).toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+  const formatTime = (start: string, end: string) => {
+    const startTime = new Date(start).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const endTime = new Date(end).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    return `${startTime} - ${endTime}`;
+  };
+
   return (
     <div>
-        <div className="group relative h-96 overflow-hidden">
-            <img className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105" src="https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="" />
+      <div className="group relative h-96 overflow-hidden">
+        <img
+          className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+          src={imageUrl}
+          alt={name}
+        />
 
-            <div className="absolute inset-0 bg-black/60"></div>
-            <div className="absolute inset-0 flex items-center">
-                <div className="max-w-6xl mx-auto p-6 w-full">
-                    <h1 className="text-4xl text-left md:text-5xl font-bold text-white mb-4">Tech Innovation Awards 2025</h1>
-                    <p className="text-xl text-left text-white mb-6 opacity-90">Celebrating breakthrough innovations and technological advancements that are shaping our future.</p>
-                    <div className="flex flex-wrap items-center gap-6 text-white/90">
-                        <div className="flex items-center">
-                            <i className="ri-calendar-line mr-2"></i>
-                            <span>March 15, 2024</span>
-                        </div>
-                        <div className="flex items-center">
-                            <i className="ri-time-line mr-2"></i>
-                            <span>7:00 PM - 11:00 PM</span>
-                        </div>
-                        <div className="flex items-center">
-                            <i className="ri-map-pin-line mr-2"></i>
-                            <span>San Francisco Convention Center</span>
-                        </div>
-                    </div>
-                </div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-6xl mx-auto p-6 w-full">
+            <h1 className="text-4xl text-left md:text-5xl font-bold text-white mb-4">
+              {name}
+            </h1>
+            <p className="text-xl text-left text-white mb-6 opacity-90">
+              {status === "VOTING_OPEN"
+                ? "Voting is currently open — make your voice count!"
+                : status === "NOMINATION_OPEN"
+                ? "Nominations are now open — submit your entries."
+                : "Stay tuned for updates on this event."}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-6 text-white/90">
+              <div className="flex items-center">
+                <i className="ri-calendar-line mr-2"></i>
+                <span>
+                  {status === "VOTING_OPEN" || status === "VOTING_CLOSED"
+                    ? `${formatDate(votingStart)} - ${formatDate(votingEnd)}`
+                    : `${formatDate(nominationStart)} - ${formatDate(
+                        nominationEnd
+                      )}`}
+                </span>
+              </div>
+
+              <div className="flex items-center">
+                <i className="ri-time-line mr-2"></i>
+                <span>
+                  {status === "VOTING_OPEN" || status === "VOTING_CLOSED"
+                    ? formatTime(votingStart, votingEnd)
+                    : formatTime(nominationStart, nominationEnd)}
+                </span>
+              </div>
+
+              {/* If you later add "location" field in EventItem */}
+              {/* <div className="flex items-center">
+                <i className="ri-map-pin-line mr-2"></i>
+                <span>{location}</span>
+              </div> */}
             </div>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }
