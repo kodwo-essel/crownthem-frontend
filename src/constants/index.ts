@@ -17,6 +17,10 @@ export const API_ENDPOINTS = {
     BY_ID: (id: number | string) => `${API_URL}/api/categories/${id}`,
   },
 
+  VOTE: {
+    BASE: `${API_URL}/api/votes`
+  },
+
   USERS: {
     BASE: `${API_URL}/api/users`,
     LIST: `${API_URL}/api/users`,

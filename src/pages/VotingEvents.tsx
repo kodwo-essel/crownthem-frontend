@@ -10,6 +10,15 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 import SearchBar from "@/components/custom/SearchBar";
 import { fetchEvents, searchEvents } from "@/services/eventService";
 import type { EventItem } from "@/types";
@@ -72,7 +81,7 @@ export default function VotingEvents() {
           </p>
 
           {/* Search & Filter */}
-          <div className="flex flex-col md:flex-row mt-12 mb-12 gap-4 justify-center">
+          <div className="flex flex-col md:flex-row mt-12 mb-12 gap-4 justify-between">
             <SearchBar
               value={searchTerm}
               onChange={(val) => {
@@ -81,22 +90,28 @@ export default function VotingEvents() {
               }}
               onSearch={() => setCurrentPage(1)}
             />
-            <select
-              value={statusFilter ?? ""}
-              onChange={(e) => {
-                setStatusFilter(e.target.value || undefined);
+            <Select
+              value={statusFilter ?? "all"}
+              onValueChange={(value) => {
+                setStatusFilter(value === "all" ? undefined : value);
                 setCurrentPage(1);
               }}
-              className="border rounded-lg px-4 py-2 text-gray-600"
             >
-              <option value="">All Status</option>
-              <option value="DRAFT">Draft</option>
-              <option value="NOMINATION_OPEN">Nomination Open</option>
-              <option value="NOMINATION_CLOSED">Nomination Closed</option>
-              <option value="VOTING_OPEN">Voting Open</option>
-              <option value="VOTING_CLOSED">Voting Closed</option>
-              <option value="COMPLETED">Completed</option>
-            </select>
+              <SelectTrigger className="w-[180px] rounded-full">
+                <SelectValue placeholder="All Status" />
+              </SelectTrigger>
+              <SelectContent className="border-none shadow-md p-2 w-full">
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="all">All Status</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="DRAFT">Draft</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_OPEN">Nomination Open</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_CLOSED">Nomination Closed</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_OPEN">Voting Open</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_CLOSED">Voting Closed</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="COMPLETED">Completed</SelectItem>
+              </SelectContent>
+            </Select>
+
+
           </div>
         </div>
 

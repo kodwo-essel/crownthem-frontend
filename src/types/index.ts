@@ -17,6 +17,7 @@ export interface Category {
   eventId: number;
   eventName: string;
   nomineeCount?: number;
+  voteCost: number;
 }
 
 export interface CategoryWithNominees {
@@ -24,6 +25,7 @@ export interface CategoryWithNominees {
   name: string;
   eventId: number;
   eventName: string;
+  voteCost: number;
   nominees: Nominee[];
 }
 
@@ -53,3 +55,17 @@ export interface EventItem {
   categories: Category[];
 }
 
+
+export interface VoteRequest{
+  voterName: string,
+  voterPhone: string,
+  nomineeCode: string,
+  voteCount: number
+}
+
+export interface VoteResponse {
+  success: boolean;
+  reference: string;
+  paymentUrl: string;
+  message: string;
+}
