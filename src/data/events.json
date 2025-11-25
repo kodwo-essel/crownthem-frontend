@@ -1,0 +1,281 @@
+{
+  "success": true,
+  "message": "Events retrieved successfully",
+  "data": {
+    "content": [
+      {
+        "id": 1,
+        "name": "Ghana Music Awards 2024",
+        "description": "Annual celebration of Ghana's finest musical talents",
+        "status": "ACTIVE",
+        "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800",
+        "nominationStart": "2024-01-01T00:00:00Z",
+        "nominationEnd": "2024-02-28T23:59:59Z",
+        "votingStart": "2024-03-01T00:00:00Z",
+        "votingEnd": "2024-04-30T23:59:59Z",
+        "archived": false,
+        "voteCost": 1.0,
+        "organizers": [
+          {
+            "id": 1,
+            "name": "Ghana Music Association",
+            "email": "info@gma.com.gh",
+            "phone": "+233244123456",
+            "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+          }
+        ],
+        "categories": [
+          {
+            "id": 1,
+            "name": "Best Male Vocalist",
+            "eventId": 1,
+            "eventName": "Ghana Music Awards 2024",
+            "nomineeCount": 3,
+            "voteCost": 1.0
+          },
+          {
+            "id": 2,
+            "name": "Best Female Vocalist",
+            "eventId": 1,
+            "eventName": "Ghana Music Awards 2024",
+            "nomineeCount": 2,
+            "voteCost": 1.0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "University Excellence Awards",
+        "description": "Recognizing outstanding academic achievements",
+        "status": "UPCOMING",
+        "imageUrl": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800",
+        "nominationStart": "2024-05-01T00:00:00Z",
+        "nominationEnd": "2024-06-30T23:59:59Z",
+        "votingStart": "2024-07-01T00:00:00Z",
+        "votingEnd": "2024-08-31T23:59:59Z",
+        "archived": false,
+        "voteCost": 0.5,
+        "organizers": [
+          {
+            "id": 2,
+            "name": "University Council",
+            "email": "awards@university.edu.gh",
+            "phone": "+233244789012",
+            "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+          }
+        ],
+        "categories": [
+          {
+            "id": 3,
+            "name": "Best Student Leader",
+            "eventId": 2,
+            "eventName": "University Excellence Awards",
+            "nomineeCount": 3,
+            "voteCost": 0.5
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tech Innovation Summit 2024",
+        "description": "Celebrating breakthrough technologies and innovations",
+        "status": "ACTIVE",
+        "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800",
+        "nominationStart": "2024-02-01T00:00:00Z",
+        "nominationEnd": "2024-03-15T23:59:59Z",
+        "votingStart": "2024-03-16T00:00:00Z",
+        "votingEnd": "2024-05-15T23:59:59Z",
+        "archived": false,
+        "voteCost": 2.0,
+        "organizers": [
+          {
+            "id": 3,
+            "name": "Tech Ghana Foundation",
+            "email": "hello@techghana.org",
+            "phone": "+233244567890",
+            "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+          }
+        ],
+        "categories": [
+          {
+            "id": 4,
+            "name": "Best Startup",
+            "eventId": 3,
+            "eventName": "Tech Innovation Summit 2024",
+            "nomineeCount": 4,
+            "voteCost": 2.0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Sports Excellence Awards",
+        "description": "Honoring outstanding athletic achievements",
+        "status": "UPCOMING",
+        "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800",
+        "nominationStart": "2024-06-01T00:00:00Z",
+        "nominationEnd": "2024-07-31T23:59:59Z",
+        "votingStart": "2024-08-01T00:00:00Z",
+        "votingEnd": "2024-09-30T23:59:59Z",
+        "archived": false,
+        "voteCost": 1.5,
+        "organizers": [
+          {
+            "id": 1,
+            "name": "Ghana Music Association",
+            "email": "info@gma.com.gh",
+            "phone": "+233244123456",
+            "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 5,
+        "name": "Film & Media Awards 2024",
+        "description": "Celebrating excellence in film and media production",
+        "status": "ACTIVE",
+        "imageUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800",
+        "nominationStart": "2024-01-15T00:00:00Z",
+        "nominationEnd": "2024-03-31T23:59:59Z",
+        "votingStart": "2024-04-01T00:00:00Z",
+        "votingEnd": "2024-06-15T23:59:59Z",
+        "archived": false,
+        "voteCost": 1.2,
+        "organizers": [
+          {
+            "id": 2,
+            "name": "University Council",
+            "email": "awards@university.edu.gh",
+            "phone": "+233244789012",
+            "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 6,
+        "name": "Business Leadership Awards",
+        "description": "Recognizing outstanding business leadership",
+        "status": "UPCOMING",
+        "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
+        "nominationStart": "2024-07-01T00:00:00Z",
+        "nominationEnd": "2024-08-31T23:59:59Z",
+        "votingStart": "2024-09-01T00:00:00Z",
+        "votingEnd": "2024-10-31T23:59:59Z",
+        "archived": false,
+        "voteCost": 3.0,
+        "organizers": [
+          {
+            "id": 3,
+            "name": "Tech Ghana Foundation",
+            "email": "hello@techghana.org",
+            "phone": "+233244567890",
+            "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 7,
+        "name": "Fashion & Style Awards",
+        "description": "Celebrating creativity in fashion and design",
+        "status": "ACTIVE",
+        "imageUrl": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800",
+        "nominationStart": "2024-02-15T00:00:00Z",
+        "nominationEnd": "2024-04-15T23:59:59Z",
+        "votingStart": "2024-04-16T00:00:00Z",
+        "votingEnd": "2024-06-30T23:59:59Z",
+        "archived": false,
+        "voteCost": 0.8,
+        "organizers": [
+          {
+            "id": 1,
+            "name": "Ghana Music Association",
+            "email": "info@gma.com.gh",
+            "phone": "+233244123456",
+            "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 8,
+        "name": "Community Service Awards",
+        "description": "Honoring dedication to community development",
+        "status": "UPCOMING",
+        "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800",
+        "nominationStart": "2024-08-01T00:00:00Z",
+        "nominationEnd": "2024-09-30T23:59:59Z",
+        "votingStart": "2024-10-01T00:00:00Z",
+        "votingEnd": "2024-11-30T23:59:59Z",
+        "archived": false,
+        "voteCost": 0.5,
+        "organizers": [
+          {
+            "id": 2,
+            "name": "University Council",
+            "email": "awards@university.edu.gh",
+            "phone": "+233244789012",
+            "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 9,
+        "name": "Youth Excellence Awards",
+        "description": "Celebrating young achievers and their contributions",
+        "status": "ACTIVE",
+        "imageUrl": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800",
+        "nominationStart": "2024-03-01T00:00:00Z",
+        "nominationEnd": "2024-05-31T23:59:59Z",
+        "votingStart": "2024-06-01T00:00:00Z",
+        "votingEnd": "2024-07-31T23:59:59Z",
+        "archived": false,
+        "voteCost": 1.0,
+        "organizers": [
+          {
+            "id": 3,
+            "name": "Tech Ghana Foundation",
+            "email": "hello@techghana.org",
+            "phone": "+233244567890",
+            "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+          }
+        ],
+        "categories": []
+      },
+      {
+        "id": 10,
+        "name": "Environmental Impact Awards",
+        "description": "Recognizing efforts in environmental conservation",
+        "status": "UPCOMING",
+        "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
+        "nominationStart": "2024-09-01T00:00:00Z",
+        "nominationEnd": "2024-10-31T23:59:59Z",
+        "votingStart": "2024-11-01T00:00:00Z",
+        "votingEnd": "2024-12-31T23:59:59Z",
+        "archived": false,
+        "voteCost": 1.5,
+        "organizers": [
+          {
+            "id": 1,
+            "name": "Ghana Music Association",
+            "email": "info@gma.com.gh",
+            "phone": "+233244123456",
+            "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+          }
+        ],
+        "categories": []
+      }
+    ],
+    "totalElements": 10,
+    "totalPages": 1,
+    "numberOfElements": 10,
+    "size": 10,
+    "number": 0,
+    "first": true,
+    "last": true,
+    "empty": false
+  }
+}

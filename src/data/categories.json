@@ -1,0 +1,52 @@
+{
+  "1": {
+    "success": true,
+    "message": "Categories retrieved successfully",
+    "data": [
+      {
+        "id": 1,
+        "name": "Best Male Vocalist",
+        "eventId": 1,
+        "eventName": "Ghana Music Awards 2024",
+        "nomineeCount": 3,
+        "voteCost": 1.0
+      },
+      {
+        "id": 2,
+        "name": "Best Female Vocalist",
+        "eventId": 1,
+        "eventName": "Ghana Music Awards 2024",
+        "nomineeCount": 2,
+        "voteCost": 1.0
+      }
+    ]
+  },
+  "2": {
+    "success": true,
+    "message": "Categories retrieved successfully",
+    "data": [
+      {
+        "id": 3,
+        "name": "Best Student Leader",
+        "eventId": 2,
+        "eventName": "University Excellence Awards",
+        "nomineeCount": 3,
+        "voteCost": 0.5
+      }
+    ]
+  },
+  "3": {
+    "success": true,
+    "message": "Categories retrieved successfully",
+    "data": [
+      {
+        "id": 4,
+        "name": "Best Startup",
+        "eventId": 3,
+        "eventName": "Tech Innovation Summit 2024",
+        "nomineeCount": 4,
+        "voteCost": 2.0
+      }
+    ]
+  }
+}

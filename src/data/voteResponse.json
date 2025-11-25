@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Vote submitted successfully",
+  "data": {
+    "success": true,
+    "reference": "VT-2024-001234",
+    "paymentUrl": "https://payment.crownthem.com/pay/VT-2024-001234",
+    "message": "Your vote has been recorded. Please complete payment to finalize."
+  }
+}

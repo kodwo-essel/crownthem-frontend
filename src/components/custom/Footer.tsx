@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2 flex flex-col items-start">
-                        <Link className="text-6xl font-['Pacifico'] text-white hover:opacity-80 transition-opacity mb-8" to="/">SpotLite</Link>
+                        <Link className="text-6xl font-['Pacifico'] text-white hover:opacity-80 transition-opacity mb-8" to="/">EaseVote</Link>
                         {/* <p className="mt-4 text-gray-300 text-left max-w-md">Elite Events
                             Redefined.</p> */}
                         <div className="flex space-x-4 mt-6">
@@ -44,7 +44,7 @@ export default function Footer() {
                         <ul className="space-y-3 text-gray-300">
                             <li className="flex items-center"><i className="ri-phone-line w-5 h-5 flex items-center justify-center mr-3"></i>+1 (555) 123-4567</li>
                             
-                            <li className="flex items-center"><i className="ri-mail-line w-5 h-5 flex items-center justify-center mr-3"></i>hello@spotlite.com</li>
+                            <li className="flex items-center"><i className="ri-mail-line w-5 h-5 flex items-center justify-center mr-3"></i>hello@easevote.com</li>
                             
                             <li className="flex items-center"><i className="ri-map-pin-line w-5 h-5 flex items-center justify-center mr-3"></i>New York, NY 10001</li>
                             
@@ -52,7 +52,7 @@ export default function Footer() {
                     </div>
                 </div>
                 
-                <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"><p className="text-gray-400 text-sm">© 2024 SpotLite. All rights reserved.</p>
+                <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"><p className="text-gray-400 text-sm">© 2024 EaseVote. All rights reserved.</p>
                 
                     <div className="flex space-x-6 mt-4 md:mt-0"><a href="/" className="text-gray-400 hover:text-accent transition-colors text-sm">Privacy Policy</a>
                     

@@ -1,26 +1,19 @@
 import type { ApiResponse } from "@/types/api";
-import { API_ENDPOINTS } from "@/constants";
+import { ENDPOINTS } from "@/constants";
 import type { VoteRequest, VoteResponse } from "@/types";
-
+import voteResponseData from "@/data/voteResponse.json";
 
 export async function submitVote(vote: VoteRequest): Promise<VoteResponse> {
-  const res = await fetch(API_ENDPOINTS.VOTE.BASE, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(vote),
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to submit vote");
-  }
-
-  const json: ApiResponse<VoteResponse> = await res.json();
-
-  if (!json.success) {
-    throw new Error(json.error || "Vote failed");
-  }
-
-  return json.data;
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 500));
+  
+  // Generate unique reference
+  const reference = `VT-${new Date().getFullYear()}-${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+  
+  return {
+    success: true,
+    reference,
+    paymentUrl: `https://payment.crownthem.com/pay/${reference}`,
+    message: "Your vote has been recorded. Please complete payment to finalize."
+  };
 }

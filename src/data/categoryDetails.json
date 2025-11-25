@@ -1,0 +1,186 @@
+{
+  "1": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 1,
+      "name": "Best Male Vocalist",
+      "eventId": 1,
+      "eventName": "Ghana Music Awards 2024",
+      "voteCost": 1.0,
+      "nominees": [
+        {
+          "id": 1,
+          "name": "Sarkodie",
+          "code": "SAR001",
+          "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400",
+          "categoryId": 1,
+          "categoryName": "Best Male Vocalist",
+          "eventId": 1,
+          "eventName": "Ghana Music Awards 2024",
+          "totalVotes": 1250
+        },
+        {
+          "id": 2,
+          "name": "Stonebwoy",
+          "code": "STO002",
+          "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
+          "categoryId": 1,
+          "categoryName": "Best Male Vocalist",
+          "eventId": 1,
+          "eventName": "Ghana Music Awards 2024",
+          "totalVotes": 980
+        },
+        {
+          "id": 3,
+          "name": "King Promise",
+          "code": "KIN003",
+          "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+          "categoryId": 1,
+          "categoryName": "Best Male Vocalist",
+          "eventId": 1,
+          "eventName": "Ghana Music Awards 2024",
+          "totalVotes": 750
+        }
+      ]
+    }
+  },
+  "2": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 2,
+      "name": "Best Female Vocalist",
+      "eventId": 1,
+      "eventName": "Ghana Music Awards 2024",
+      "voteCost": 1.0,
+      "nominees": [
+        {
+          "id": 4,
+          "name": "Gyakie",
+          "code": "GYA004",
+          "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400",
+          "categoryId": 2,
+          "categoryName": "Best Female Vocalist",
+          "eventId": 1,
+          "eventName": "Ghana Music Awards 2024",
+          "totalVotes": 890
+        },
+        {
+          "id": 5,
+          "name": "Wendy Shay",
+          "code": "WEN005",
+          "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+          "categoryId": 2,
+          "categoryName": "Best Female Vocalist",
+          "eventId": 1,
+          "eventName": "Ghana Music Awards 2024",
+          "totalVotes": 670
+        }
+      ]
+    }
+  },
+  "3": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 3,
+      "name": "Best Student Leader",
+      "eventId": 2,
+      "eventName": "University Excellence Awards",
+      "voteCost": 0.5,
+      "nominees": [
+        {
+          "id": 6,
+          "name": "John Mensah",
+          "code": "JOH006",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+          "categoryId": 3,
+          "categoryName": "Best Student Leader",
+          "eventId": 2,
+          "eventName": "University Excellence Awards",
+          "totalVotes": 450
+        },
+        {
+          "id": 7,
+          "name": "Sarah Osei",
+          "code": "SAR007",
+          "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+          "categoryId": 3,
+          "categoryName": "Best Student Leader",
+          "eventId": 2,
+          "eventName": "University Excellence Awards",
+          "totalVotes": 380
+        },
+        {
+          "id": 8,
+          "name": "Michael Asante",
+          "code": "MIC008",
+          "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+          "categoryId": 3,
+          "categoryName": "Best Student Leader",
+          "eventId": 2,
+          "eventName": "University Excellence Awards",
+          "totalVotes": 320
+        }
+      ]
+    }
+  },
+  "4": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 4,
+      "name": "Best Startup",
+      "eventId": 3,
+      "eventName": "Tech Innovation Summit 2024",
+      "voteCost": 2.0,
+      "nominees": [
+        {
+          "id": 9,
+          "name": "TechFlow Solutions",
+          "code": "TEC009",
+          "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400",
+          "categoryId": 4,
+          "categoryName": "Best Startup",
+          "eventId": 3,
+          "eventName": "Tech Innovation Summit 2024",
+          "totalVotes": 650
+        },
+        {
+          "id": 10,
+          "name": "AgriTech Ghana",
+          "code": "AGR010",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+          "categoryId": 4,
+          "categoryName": "Best Startup",
+          "eventId": 3,
+          "eventName": "Tech Innovation Summit 2024",
+          "totalVotes": 580
+        },
+        {
+          "id": 11,
+          "name": "EduConnect",
+          "code": "EDU011",
+          "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+          "categoryId": 4,
+          "categoryName": "Best Startup",
+          "eventId": 3,
+          "eventName": "Tech Innovation Summit 2024",
+          "totalVotes": 420
+        },
+        {
+          "id": 12,
+          "name": "FinTech Plus",
+          "code": "FIN012",
+          "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+          "categoryId": 4,
+          "categoryName": "Best Startup",
+          "eventId": 3,
+          "eventName": "Tech Innovation Summit 2024",
+          "totalVotes": 390
+        }
+      ]
+    }
+  }
+}

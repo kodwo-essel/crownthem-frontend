@@ -1,5 +1,5 @@
 import { Button } from "../ui/button"
-import { Menu, PhoneCall } from "lucide-react"
+import { Menu, LogIn } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -34,7 +34,7 @@ export default function Navbar() {
             className="text-2xl font-['Pacifico'] text-primary hover:opacity-80 transition-opacity"
             to="/"
           >
-            SpotLite
+            EaseVote
           </Link>
         </div>
 
@@ -51,10 +51,12 @@ export default function Navbar() {
 
         {/* CTA Buttons */}
         <div className="cta hidden md:flex gap-2">
-          <Button className="w-24 cursor-pointer transform  transition-all duration-500 ease-in-out hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:scale-105">
-            Contact
-            <PhoneCall size={16} />
-          </Button>
+          <Link to="/signin">
+            <Button className="w-24 cursor-pointer transform  transition-all duration-500 ease-in-out hover:shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:scale-105">
+              Sign In
+              <LogIn size={16} />
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -77,6 +79,7 @@ export default function Navbar() {
             <Link
                 key={item.label}
                 to={item.href}
+                onClick={() => setIsOpen(false)}
                 className={`transform transition-all duration-700 ease-out ${
                 isOpen
                     ? `opacity-100 translate-y-0 scale-100 ${delayClasses[i] || 'delay-[100ms]'}`
@@ -92,19 +95,21 @@ export default function Navbar() {
             </Link>
             ))}
 
-          <Button
-            className={`w-40 mt-4 transform transition-all duration-300 ease-out ${
-              isOpen
-                ? `opacity-100 translate-y-0 scale-100`
-                : "opacity-0 translate-y-8 scale-95"
-            } hover:scale-105 cursor-pointer`}
-            style={{
-              transitionDelay: isOpen ? `${menuItems.length * 150 + 100}ms` : '0ms'
-            }}
-          >
-            Contact
-            <PhoneCall size={16} />
-          </Button>
+          <Link to="/signin" onClick={() => setIsOpen(false)}>
+            <Button
+              className={`w-40 mt-4 transform transition-all duration-300 ease-out ${
+                isOpen
+                  ? `opacity-100 translate-y-0 scale-100`
+                  : "opacity-0 translate-y-8 scale-95"
+              } hover:scale-105 cursor-pointer`}
+              style={{
+                transitionDelay: isOpen ? `${menuItems.length * 150 + 100}ms` : '0ms'
+              }}
+            >
+              Sign In
+              <LogIn size={16} />
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

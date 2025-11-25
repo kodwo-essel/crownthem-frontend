@@ -1,35 +1,19 @@
-import { API_URL } from "@/config";
+export { ENDPOINTS } from './endpoints';
 
+// Legacy API endpoints (kept for reference but not used)
 export const API_ENDPOINTS = {
   EVENTS: {
-    BASE: `${API_URL}/api/events`,
-    LIST: `${API_URL}/api/events`,
-    SEARCH: `${API_URL}/api/events/search`,
-    BY_ID: (id: number | string) => `${API_URL}/api/events/${id}`,
-    CREATE: `${API_URL}/api/events`,
-    UPDATE: (id: number | string) => `${API_URL}/api/events/${id}`,
-    DELETE: (id: number | string) => `${API_URL}/api/events/${id}`,
+    BASE: '/api/events',
+    LIST: '/api/events',
+    SEARCH: '/api/events/search',
+    BY_ID: (id: number | string) => `/api/events/${id}`,
   },
-
   CATEGORIES: {
-    BASE: `${API_URL}/api/categories`,
-    BY_EVENT: (eventId: number | string) => `${API_URL}/api/categories/by-event/${eventId}`,
-    BY_ID: (id: number | string) => `${API_URL}/api/categories/${id}`,
+    BASE: '/api/categories',
+    BY_EVENT: (eventId: number | string) => `/api/categories/by-event/${eventId}`,
+    BY_ID: (id: number | string) => `/api/categories/${id}`,
   },
-
   VOTE: {
-    BASE: `${API_URL}/api/votes`
-  },
-
-  USERS: {
-    BASE: `${API_URL}/api/users`,
-    LIST: `${API_URL}/api/users`,
-    BY_ID: (id: number | string) => `${API_URL}/api/users/${id}`,
-  },
-
-  AUTH: {
-    LOGIN: `${API_URL}/api/auth/login`,
-    REGISTER: `${API_URL}/api/auth/register`,
-    LOGOUT: `${API_URL}/api/auth/logout`,
+    BASE: '/api/votes'
   },
 };

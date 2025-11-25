@@ -1,21 +1,27 @@
-// services/categoryService.ts
-import { API_ENDPOINTS } from "@/constants";
+import { ENDPOINTS } from "@/constants";
 import type { Category, CategoryWithNominees } from "@/types";
-import type {ApiResponse} from "@/types/api"
+import type { ApiResponse } from "@/types/api";
+import categoriesData from "@/data/categories.json";
+import categoryDetailsData from "@/data/categoryDetails.json";
 
 export async function fetchCategoriesByEvent(eventId: number | string): Promise<Category[]> {
-  const res = await fetch(API_ENDPOINTS.CATEGORIES.BY_EVENT(eventId));
-  if (!res.ok) {
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 300));
+  
+  const data = categoriesData[eventId as keyof typeof categoriesData];
+  if (!data) {
     throw new Error("Failed to fetch categories");
   }
-  const json: ApiResponse<Category[]> = await res.json();
-  return json.data;
+  return data.data;
 }
 
-
 export async function fetchCategoryById(categoryId: number): Promise<CategoryWithNominees> {
-  const res = await fetch(`${API_ENDPOINTS.CATEGORIES.BASE}/${categoryId}`);
-  if (!res.ok) throw new Error("Failed to fetch category");
-  const json: ApiResponse<CategoryWithNominees> = await res.json();
-  return json.data;
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 300));
+  
+  const data = categoryDetailsData[categoryId as keyof typeof categoryDetailsData];
+  if (!data) {
+    throw new Error("Failed to fetch category");
+  }
+  return data.data;
 }

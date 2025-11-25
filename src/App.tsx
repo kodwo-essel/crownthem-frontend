@@ -9,6 +9,9 @@ import Category from './pages/Category';
 import NomineeVoting from './pages/NomineeVoting';
 import VotingSuccessful from './pages/VotingSuccessful';
 import TicketEvents from './pages/TicketEvents';
+import TicketEventDetails from './pages/TicketEventDetails';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -37,6 +40,10 @@ function App() {
             <Route path="/voting-success" element={<VotingSuccessful />} />
 
             <Route path="/ticket-events" element={<TicketEvents />} />
+            <Route path="/ticket-events/:eventId" element={<TicketEventDetails />} />
+            
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </main>
 
