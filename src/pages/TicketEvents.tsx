@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import TicketEventCard from "@/components/custom/TicketEventCard";
 import {
@@ -123,8 +123,7 @@ const mockEvents = [
 ];
 
 export default function TicketEvents() {
-  const [events, setEvents] = useState(mockEvents);
-  const [loading, setLoading] = useState(false);
+  const [events] = useState(mockEvents);
   
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);

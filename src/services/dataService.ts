@@ -45,7 +45,7 @@ export class DataService {
     return event ? { ...data, data: event } : null;
   }
 
-  private async searchEvents(params: any) {
+  private async searchEvents(_params: any) {
     const { default: data } = await import('@/data/events.json');
     return data; // Simplified for now
   }

@@ -1,6 +1,4 @@
-import { ENDPOINTS } from "@/constants";
 import type { Category, CategoryWithNominees } from "@/types";
-import type { ApiResponse } from "@/types/api";
 import categoriesData from "@/data/categories.json";
 import categoryDetailsData from "@/data/categoryDetails.json";
 
@@ -19,7 +17,7 @@ export async function fetchCategoryById(categoryId: number): Promise<CategoryWit
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 300));
   
-  const data = categoryDetailsData[categoryId as keyof typeof categoryDetailsData];
+  const data = categoryDetailsData[categoryId.toString() as keyof typeof categoryDetailsData];
   if (!data) {
     throw new Error("Failed to fetch category");
   }
