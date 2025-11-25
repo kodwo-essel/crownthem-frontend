@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Trophy, Ticket, Calendar, Users } from 'lucide-react'
 
+import heroImg1 from '@/assets/hero/a.jpg'
+import heroImg2 from '@/assets/hero/b.jpg'
+import heroImg3 from '@/assets/hero/c.jpg'
+import heroImg4 from '@/assets/hero/d.jpg'
+
 const spotlights = [
   {
     title: "Vote Smart",
@@ -9,7 +14,7 @@ const spotlights = [
     tagline: "Vote Secure!",
     description: "Transform your events with effortless e-voting and make every vote count with confidence",
     icon: Trophy,
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200"
+    image: heroImg1
   },
   {
     title: "Event Management",
@@ -17,7 +22,7 @@ const spotlights = [
     tagline: "Made Effortless",
     description: "Comprehensive event planning and management with full admin control",
     icon: Calendar,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200"
+    image: heroImg2
   },
   {
     title: "Event Ticketing",
@@ -25,7 +30,7 @@ const spotlights = [
     tagline: "Made Simple",
     description: "Comprehensive e-ticketing services for all your events",
     icon: Ticket,
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200"
+    image: heroImg3
   },
   {
     title: "24/7 Support",
@@ -33,7 +38,7 @@ const spotlights = [
     tagline: "Made Reliable",
     description: "Round-the-clock technical support and exceptional customer service",
     icon: Users,
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200"
+    image: heroImg4
   }
 ]
 
