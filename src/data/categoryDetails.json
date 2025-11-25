@@ -182,5 +182,173 @@
         }
       ]
     }
+  },
+  "5": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 5,
+      "name": "Best Athlete",
+      "eventId": 4,
+      "eventName": "Sports Excellence Awards",
+      "voteCost": 1.5,
+      "nominees": [
+        {
+          "id": 13,
+          "name": "John Athlete",
+          "code": "ATH013",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+          "categoryId": 5,
+          "categoryName": "Best Athlete",
+          "eventId": 4,
+          "eventName": "Sports Excellence Awards",
+          "totalVotes": 320
+        }
+      ]
+    }
+  },
+  "6": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 6,
+      "name": "Best Director",
+      "eventId": 5,
+      "eventName": "Film & Media Awards 2024",
+      "voteCost": 1.2,
+      "nominees": [
+        {
+          "id": 14,
+          "name": "Jane Director",
+          "code": "DIR014",
+          "imageUrl": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400",
+          "categoryId": 6,
+          "categoryName": "Best Director",
+          "eventId": 5,
+          "eventName": "Film & Media Awards 2024",
+          "totalVotes": 280
+        }
+      ]
+    }
+  },
+  "7": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 7,
+      "name": "CEO of the Year",
+      "eventId": 6,
+      "eventName": "Business Leadership Awards",
+      "voteCost": 3.0,
+      "nominees": [
+        {
+          "id": 15,
+          "name": "Business Leader",
+          "code": "CEO015",
+          "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+          "categoryId": 7,
+          "categoryName": "CEO of the Year",
+          "eventId": 6,
+          "eventName": "Business Leadership Awards",
+          "totalVotes": 450
+        }
+      ]
+    }
+  },
+  "8": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 8,
+      "name": "Best Designer",
+      "eventId": 7,
+      "eventName": "Fashion & Style Awards",
+      "voteCost": 0.8,
+      "nominees": [
+        {
+          "id": 16,
+          "name": "Fashion Designer",
+          "code": "FAS016",
+          "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+          "categoryId": 8,
+          "categoryName": "Best Designer",
+          "eventId": 7,
+          "eventName": "Fashion & Style Awards",
+          "totalVotes": 210
+        }
+      ]
+    }
+  },
+  "9": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 9,
+      "name": "Community Hero",
+      "eventId": 8,
+      "eventName": "Community Service Awards",
+      "voteCost": 0.5,
+      "nominees": [
+        {
+          "id": 17,
+          "name": "Community Leader",
+          "code": "COM017",
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+          "categoryId": 9,
+          "categoryName": "Community Hero",
+          "eventId": 8,
+          "eventName": "Community Service Awards",
+          "totalVotes": 180
+        }
+      ]
+    }
+  },
+  "10": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 10,
+      "name": "Young Achiever",
+      "eventId": 9,
+      "eventName": "Youth Excellence Awards",
+      "voteCost": 1.0,
+      "nominees": [
+        {
+          "id": 18,
+          "name": "Young Leader",
+          "code": "YOU018",
+          "imageUrl": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400",
+          "categoryId": 10,
+          "categoryName": "Young Achiever",
+          "eventId": 9,
+          "eventName": "Youth Excellence Awards",
+          "totalVotes": 340
+        }
+      ]
+    }
+  },
+  "11": {
+    "success": true,
+    "message": "Category retrieved successfully",
+    "data": {
+      "id": 11,
+      "name": "Eco Champion",
+      "eventId": 10,
+      "eventName": "Environmental Impact Awards",
+      "voteCost": 1.5,
+      "nominees": [
+        {
+          "id": 19,
+          "name": "Environmental Activist",
+          "code": "ECO019",
+          "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+          "categoryId": 11,
+          "categoryName": "Eco Champion",
+          "eventId": 10,
+          "eventName": "Environmental Impact Awards",
+          "totalVotes": 260
+        }
+      ]
+    }
   }
 }
