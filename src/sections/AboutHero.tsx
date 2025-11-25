@@ -9,7 +9,7 @@ export default function AboutHero() {
       
       <div className="relative max-w-7xl mx-auto px-6 py-20 z-10">
         <div className="text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl mb-6 leading-tight">
             About EaseVote
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">

@@ -29,7 +29,7 @@ export default function SignUp() {
             <Link to="/" className="text-3xl font-['Pacifico'] text-primary">
               EaseVote
             </Link>
-            <h1 className="text-2xl font-bold text-gray-900 mt-4">Create account</h1>
+            <h1 className="text-2xl font-heading text-gray-900 mt-4">Create account</h1>
             <p className="text-gray-600 mt-1">Join EaseVote today</p>
           </div>
 

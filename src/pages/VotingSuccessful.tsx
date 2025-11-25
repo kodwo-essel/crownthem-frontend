@@ -40,7 +40,7 @@ export default function VotingSuccessful() {
       </div>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-bold mb-3">Voting Successful</h1>
+      <h1 className="text-2xl md:text-3xl font-heading mb-3">Voting Successful</h1>
       <p className="text-gray-600 max-w-md mb-8">
         Your vote has been recorded successfully. Thank you for participating!
       </p>

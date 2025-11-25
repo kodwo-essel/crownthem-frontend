@@ -19,7 +19,7 @@ export default function SignIn() {
             <Link to="/" className="text-3xl font-['Pacifico'] text-primary">
               EaseVote
             </Link>
-            <h1 className="text-2xl font-bold text-gray-900 mt-4">Welcome back</h1>
+            <h1 className="text-2xl font-heading text-gray-900 mt-4">Welcome back</h1>
             <p className="text-gray-600 mt-1">Sign in to your account</p>
           </div>
 

@@ -3,7 +3,7 @@ export default function ChooseUsCard() {
   return (
     <div>
         <div className="w-full flex p-6 flex-col items-start gap-2 bg-gray-100 rounded-xl overflow-hidden">
-            <h2 className="text-2xl text-left font-bold text-primary">Nominate with us</h2>
+            <h2 className="text-2xl text-left font-heading text-primary">Nominate with us</h2>
             <p className="text-md text-left text-gray-500">
                 Generate nomination forms seamlessly with our platform.
             </p>

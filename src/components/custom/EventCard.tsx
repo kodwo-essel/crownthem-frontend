@@ -21,7 +21,7 @@ export default function EventCard({
         </div>
 
         <CardContent className="pb-6 sm:pb-4">
-          <h3 className="text-l text-left text-primary mb-2 font-bold">
+          <h3 className="text-l text-left text-primary mb-2 font-heading">
             {name}
           </h3>
           {/* Status tag under title */}

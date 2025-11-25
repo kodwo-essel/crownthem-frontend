@@ -22,7 +22,7 @@ export default function TicketTypeCard({ ticket, quantity, onQuantityChange }: T
         <h3 className="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
           {ticket.name}
         </h3>
-        <span className="text-2xl font-bold text-primary">{ticket.currency} {ticket.price}</span>
+        <span className="text-2xl font-heading text-primary">{ticket.currency} {ticket.price}</span>
       </div>
 
       {/* Description */}
@@ -44,7 +44,7 @@ export default function TicketTypeCard({ ticket, quantity, onQuantityChange }: T
           >
             -
           </button>
-          <span className="w-8 text-center font-bold text-lg">{quantity}</span>
+          <span className="w-8 text-center font-heading text-lg">{quantity}</span>
           <button 
             onClick={() => onQuantityChange(ticket.id, Math.min(ticket.available, quantity + 1))}
             className="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors"

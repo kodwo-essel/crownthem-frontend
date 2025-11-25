@@ -306,7 +306,7 @@ export default function TicketEventDetails() {
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-6xl mx-auto p-6 w-full">
-            <h1 className="text-4xl text-left md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl text-left md:text-5xl font-heading text-white mb-4">
               {event.name}
             </h1>
             <p className="text-xl text-left text-white mb-6 opacity-90">
@@ -344,7 +344,7 @@ export default function TicketEventDetails() {
       {/* Ticket Selection */}
       <div className="max-w-6xl mx-auto px-6 pb-16">
         <div className="mb-8 text-left">
-          <h2 className="text-3xl font-bold text-primary mb-4">Select Tickets</h2>
+          <h2 className="text-3xl font-heading text-primary mb-4">Select Tickets</h2>
           <p className="text-gray-600 text-lg">
             Choose your ticket type and quantity
           </p>
@@ -357,7 +357,7 @@ export default function TicketEventDetails() {
                 <h3 className="text-lg font-semibold text-primary group-hover:text-accent transition-colors">
                   {ticket.name}
                 </h3>
-                <span className="text-lg font-bold text-primary">{ticket.currency} {ticket.price}</span>
+                <span className="text-lg font-heading text-primary">{ticket.currency} {ticket.price}</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600 mb-3">
                 <i className="ri-ticket-line text-sm"></i>
@@ -390,7 +390,7 @@ export default function TicketEventDetails() {
           <div className="bg-white rounded-lg shadow-lg p-4 border border-primary">
             <div className="flex justify-between items-center mb-4">
               <span className="font-semibold">Total: {getTotalTickets()} ticket(s)</span>
-              <span className="text-xl font-bold text-primary">GHS {getTotalPrice().toFixed(2)}</span>
+              <span className="text-xl font-heading text-primary">GHS {getTotalPrice().toFixed(2)}</span>
             </div>
             <div className="flex justify-center">
               <button className="px-8 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">

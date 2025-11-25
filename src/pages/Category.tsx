@@ -75,7 +75,7 @@ export default function Category() {
 
       {/* Header */}
       <div className="mb-8 text-left">
-        <h1 className="text-4xl font-bold text-primary mb-4">{category.name}</h1>
+        <h1 className="text-4xl font-heading text-primary mb-4" >{category.name}</h1>
         <p className="text-lg text-gray-600">
           Vote for your favorite nominee in this category
         </p>

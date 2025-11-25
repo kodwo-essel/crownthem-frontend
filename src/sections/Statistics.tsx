@@ -32,7 +32,7 @@ export default function Statistics() {
     <section className="py-16 bg-primary">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl text-white mb-4 font-heading">
             Trusted by Thousands
           </h2>
           <p className="text-white/80 text-lg">
@@ -48,7 +48,7 @@ export default function Statistics() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-accent rounded-full mb-4">
                   <IconComponent className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-3xl md:text-4xl font-heading text-white mb-2">
                   {stat.number}
                 </div>
                 <div className="text-lg font-semibold text-white mb-1">

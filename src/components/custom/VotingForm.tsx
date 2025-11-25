@@ -60,7 +60,7 @@ export default function VotingForm({ nominee, voteCost }: Readonly<VotingFormPro
 
         {/* Form */}
         <div>
-          <h2 className="text-2xl font-bold mb-2 text-primary">
+          <h2 className="text-2xl mb-2 text-primary font-heading">
             Vote for {nominee.name} ({nominee.code})
           </h2>
           <p className="text-gray-600 mb-6">

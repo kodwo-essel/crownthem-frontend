@@ -18,7 +18,7 @@ export default function CategoryCard({
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-xl font-semibold text-primary group-hover:text-accent transition-colors">
+        <h3 className="text-xl text-primary group-hover:text-accent transition-colors font-heading">
           {name}
         </h3>
         <i className="ri-arrow-right-line text-gray-400 group-hover:text-accent transition-colors"></i>

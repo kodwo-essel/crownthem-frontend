@@ -10,7 +10,7 @@ export default function TestimonialCard() {
             <div className="flex items-center gap-4 text-left">
                 <img className='w-15 h-15 shadow-[0_8px_24px_rgba(0,0,0,0.15)] rounded-full object-cover object-top' src={person} alt="" />
                 <div className="flex flex-col text-left">
-                    <p className='font-bold text-xl'>John Doe</p>
+                    <p className='font-heading text-xl'>John Doe</p>
                     <p className='text-primary/70'>CEO, TechFlow</p>
                 </div>
             </div>

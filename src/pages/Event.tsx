@@ -54,7 +54,7 @@ export default function Event() {
           {/* Categories */}
           <div className="max-w-6xl mx-auto px-6 pb-16">
             <div className="mb-8 text-left">
-              <h2 className="text-3xl font-bold text-primary mb-4">
+              <h2 className="text-3xl text-primary font-heading mb-4">
                 Vote by Category
               </h2>
               <p className="text-gray-600 text-lg">

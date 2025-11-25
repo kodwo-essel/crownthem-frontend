@@ -29,7 +29,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">
               About EaseVote Ghana
             </h2>
             <p className="text-gray-600 text-lg mb-6">
@@ -50,13 +50,13 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-heading text-primary mb-4">Our Mission</h3>
             <p className="text-gray-600">
               Our mission is to provide businesses and organizations with the tools to digitize their operations, connecting them with their target audience through a secure, reliable, and convenient medium.
             </p>
           </div>
           <div className="bg-white p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-heading text-primary mb-4">Our Vision</h3>
             <p className="text-gray-600">
               Our vision at EaseVote is to become the premier global platform for digital event management, setting the standard for seamless, secure, and inclusive engagement between organizers and participants.
             </p>
@@ -64,7 +64,7 @@ export default function About() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold text-primary text-center mb-12">Our Core Values</h3>
+          <h3 className="text-3xl font-heading text-primary text-center mb-12">Our Core Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.icon
@@ -73,7 +73,7 @@ export default function About() {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-accent rounded-full mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-primary mb-2">{value.title}</h4>
+                  <h4 className="text-xl font-heading text-primary mb-2">{value.title}</h4>
                   <p className="text-gray-600">{value.description}</p>
                 </div>
               )

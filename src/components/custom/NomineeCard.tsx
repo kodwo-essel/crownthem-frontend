@@ -17,7 +17,7 @@ export default function NomineeCard({ nominee, onVote }: Readonly<NomineeCardPro
       />
 
       {/* Candidate code top right */}
-      <div className="absolute top-2 right-2 px-2 py-1 bg-secondary bg-opacity-70 text-white text-xs font-bold rounded-lg">
+      <div className="absolute top-2 right-2 px-2 py-1 bg-secondary bg-opacity-70 text-white text-xs font-heading rounded-lg">
         {nominee.code}
       </div>
 

@@ -65,7 +65,7 @@ export default function Hero() {
             <span className="text-sm font-medium">{current.subtitle}</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading mb-6 leading-tight">
             {current.title}
           </h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white/70 mb-6 transition-all duration-500">

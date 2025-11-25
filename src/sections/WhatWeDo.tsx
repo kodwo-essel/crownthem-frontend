@@ -67,7 +67,7 @@ export default function WhatWeDo() {
     <div>
       <div className="max-w-7xl mx-auto p-6 pt-16">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-primary mb-6">What we do</h2>
+          <h2 className="text-5xl font-heading text-primary mb-6">What we do</h2>
           <p className="text-xl max-w-3xl mx-auto">
             With us, you have the best experience managing your events.
           </p>
@@ -78,7 +78,7 @@ export default function WhatWeDo() {
           <div className="hidden md:flex flex-row items-start justify-center gap-12">
             {/* Left side list */}
             <div className="flex flex-col items-start text-left gap-4 lg:gap-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
+              <h2 className="text-3xl lg:text-4xl text-primary font-heading">
                 Expert Care for Your Specific Needs
               </h2>
               <p className="lg:text-lg">

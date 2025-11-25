@@ -48,7 +48,7 @@ export default function TicketEventCard({ event }: TicketEventCardProps) {
         
         {/* Content overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-          <h3 className="text-lg font-bold mb-2 line-clamp-2">{event.name}</h3>
+          <h3 className="text-lg font-heading mb-2 line-clamp-2">{event.name}</h3>
           
           <div className="flex justify-between items-center text-sm mb-2">
             <span className="font-medium">{formatDate(event.date)}</span>

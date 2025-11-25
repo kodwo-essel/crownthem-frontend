@@ -23,7 +23,7 @@ export default function Partners() {
     <div className="bg-gray-50">
       <div className="max-w-7xl mx-auto p-6 pb-16">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-primary mb-6">Trusted Partners</h2>
+          <h2 className="text-5xl font-heading text-primary mb-6">Trusted Partners</h2>
           <p className="text-xl max-w-3xl mx-auto">
             We collaborate with industry leaders to bring you the best event experiences
           </p>

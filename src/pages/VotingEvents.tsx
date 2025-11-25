@@ -72,7 +72,7 @@ export default function VotingEvents() {
 
         {/* Heading */}
         <div className="text-center pt-12 mb-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading text-primary mb-4">
             Awards & Voting Events
           </h2>
           <p className="text-xl text-gray-600 mb-6">
