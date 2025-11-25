@@ -2,6 +2,7 @@ import { Button } from "../ui/button"
 import { Menu, LogIn } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import logo from '@/assets/logos/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +35,7 @@ export default function Navbar() {
             className="text-2xl font-['Pacifico'] text-primary hover:opacity-80 transition-opacity"
             to="/"
           >
-            EaseVote
+            <img src={logo} alt="logo" className="w-auto h-12" />
           </Link>
         </div>
 
