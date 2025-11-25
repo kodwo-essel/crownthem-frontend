@@ -72,7 +72,7 @@ export default function VotingEvents() {
 
         {/* Heading */}
         <div className="text-center pt-12 mb-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#131D4F] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Awards & Voting Events
           </h2>
           <p className="text-xl text-gray-600 mb-6">
@@ -102,12 +102,12 @@ export default function VotingEvents() {
               </SelectTrigger>
               <SelectContent className="border-none shadow-md p-2 w-full">
                 <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="all">All Status</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="DRAFT">Draft</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_OPEN">Nomination Open</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_CLOSED">Nomination Closed</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_OPEN">Voting Open</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_CLOSED">Voting Closed</SelectItem>
-                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="COMPLETED">Completed</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="DRAFT">DRAFT</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_OPEN">NOMINATION OPEN</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="NOMINATION_CLOSED">NOMINATION CLOSED</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_OPEN">VOTING OPEN</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="VOTING_CLOSED">VOTING CLOSED</SelectItem>
+                <SelectItem className="hover:bg-gray-100 hover:text-primary focus:bg-gray-100 focus:text-primary" value="COMPLETED">COMPLETED</SelectItem>
               </SelectContent>
             </Select>
 

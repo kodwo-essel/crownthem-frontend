@@ -32,31 +32,31 @@ export default function TicketEventCard({ event }: TicketEventCardProps) {
     return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
   };
 
-  const lowestPrice = Math.min(...event.ticketTypes.map(t => t.price));
   const totalAvailable = event.ticketTypes.reduce((sum, t) => sum + t.available, 0);
 
   return (
     <Link to={`/ticket-events/${event.id}`}>
-      <div className="group flex flex-col rounded-lg overflow-hidden transform transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl bg-white border border-gray-100">
-        <div className="relative">
-          <img 
-            className="w-full h-40 object-cover" 
-            src={event.imageUrl} 
-            alt={event.name}
-          />
-        </div>
+      <div className="group relative rounded-2xl overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl">
+        <img 
+          className="w-full h-64 object-cover" 
+          src={event.imageUrl} 
+          alt={event.name}
+        />
         
-        <div className="flex flex-col gap-3 p-4">
-          <h3 className="text-lg font-bold text-primary line-clamp-2">{event.name}</h3>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        
+        {/* Content overlay */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 className="text-lg font-bold mb-2 line-clamp-2">{event.name}</h3>
           
-          <div className="flex justify-between items-center text-sm">
-            <span className="font-medium text-gray-900">{formatDate(event.date)}</span>
-            <span className="text-gray-500">{event.time}</span>
+          <div className="flex justify-between items-center text-sm mb-2">
+            <span className="font-medium">{formatDate(event.date)}</span>
+            <span className="opacity-90">{event.time}</span>
           </div>
           
-          <div className="flex justify-between items-center pt-2 border-t border-gray-100">
-            <span className="text-lg font-bold text-primary">From {event.ticketTypes[0].currency} {lowestPrice}</span>
-            <span className="text-xs text-gray-500">{totalAvailable} available</span>
+          <div className="flex justify-end">
+            <span className="text-xs text-accent font-medium">{totalAvailable} available</span>
           </div>
         </div>
       </div>

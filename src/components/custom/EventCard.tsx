@@ -17,25 +17,26 @@ export default function EventCard({
             alt={name}
           />
 
-          {/* Right status badge */}
-          {status && (
-            <div className="absolute top-4 right-4">
-              <span
-                  className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    EVENT_STATUS[status as keyof typeof EVENT_STATUS]?.COLOR ??
-                    "bg-gray-100 text-gray-700"
-                  }`}
-                >
-                  {EVENT_STATUS[status as keyof typeof EVENT_STATUS]?.NAME ?? status}
-              </span>
-            </div>
-          )}
+
         </div>
 
         <CardContent className="pb-6 sm:pb-4">
           <h3 className="text-l text-left text-primary mb-2 font-bold">
             {name}
           </h3>
+          {/* Status tag under title */}
+          {status && (
+            <div className="text-left">
+              <span
+                className={`inline-block px-1.5 py-0.5 rounded-full text-[8px] font-medium border ${
+                  EVENT_STATUS[status as keyof typeof EVENT_STATUS]?.BORDER_COLOR ??
+                  "border-gray-300 bg-gray-50 text-gray-700"
+                }`}
+              >
+                {EVENT_STATUS[status as keyof typeof EVENT_STATUS]?.NAME ?? status}
+              </span>
+            </div>
+          )}
           {/* <div className="space-y-2">
             <div className="flex items-center text-gray-600">
               <i className="ri-calendar-line text-accent mr-2"></i>

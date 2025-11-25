@@ -12,6 +12,7 @@ import TicketEvents from './pages/TicketEvents';
 import TicketEventDetails from './pages/TicketEventDetails';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import About from './pages/About';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
             
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
 

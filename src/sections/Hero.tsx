@@ -4,34 +4,34 @@ import { Trophy, Ticket, Calendar, Users } from 'lucide-react'
 
 const spotlights = [
   {
-    title: "Host Events",
-    subtitle: "Create & Manage",
-    tagline: "Made Simple",
-    description: "Organize award ceremonies, conferences, and celebrations with ease",
-    icon: Calendar,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200"
-  },
-  {
-    title: "Sell Tickets",
-    subtitle: "Easy Ticketing", 
-    tagline: "Made Easy",
-    description: "Sell tickets with multiple pricing tiers and real-time availability",
-    icon: Ticket,
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200"
-  },
-  {
-    title: "Voting System",
-    subtitle: "Engage Audience",
-    tagline: "Made Seamless",
-    description: "Let your audience vote for their favorites in award ceremonies",
+    title: "Vote Smart",
+    subtitle: "Secure E-Voting",
+    tagline: "Vote Secure!",
+    description: "Transform your events with effortless e-voting and make every vote count with confidence",
     icon: Trophy,
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200"
   },
   {
-    title: "Manage Attendees",
-    subtitle: "Track Engagement",
-    tagline: "Made Smart",
-    description: "Monitor attendance, engagement, and event analytics in real-time",
+    title: "Event Management",
+    subtitle: "Simple & Easy", 
+    tagline: "Made Effortless",
+    description: "Comprehensive event planning and management with full admin control",
+    icon: Calendar,
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200"
+  },
+  {
+    title: "Event Ticketing",
+    subtitle: "E-Ticketing Services",
+    tagline: "Made Simple",
+    description: "Comprehensive e-ticketing services for all your events",
+    icon: Ticket,
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200"
+  },
+  {
+    title: "24/7 Support",
+    subtitle: "Always Here",
+    tagline: "Made Reliable",
+    description: "Round-the-clock technical support and exceptional customer service",
     icon: Users,
     image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200"
   }
