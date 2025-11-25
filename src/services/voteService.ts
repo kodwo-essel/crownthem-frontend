@@ -1,9 +1,6 @@
-import type { ApiResponse } from "@/types/api";
-import { ENDPOINTS } from "@/constants";
 import type { VoteRequest, VoteResponse } from "@/types";
-import voteResponseData from "@/data/voteResponse.json";
 
-export async function submitVote(vote: VoteRequest): Promise<VoteResponse> {
+export async function submitVote(_vote: VoteRequest): Promise<VoteResponse> {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 500));
   

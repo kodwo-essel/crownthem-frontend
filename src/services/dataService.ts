@@ -34,7 +34,7 @@ export class DataService {
     }
   }
 
-  private async getEvents(params?: any) {
+  private async getEvents(_params?: any) {
     const { default: data } = await import('@/data/events.json');
     return data;
   }
@@ -52,15 +52,15 @@ export class DataService {
 
   private async getCategoriesByEvent(eventId: number | string) {
     const { default: data } = await import('@/data/categories.json');
-    return data[eventId as keyof typeof data] || null;
+    return data[eventId.toString() as keyof typeof data] || null;
   }
 
   private async getCategoryById(id: number) {
     const { default: data } = await import('@/data/categoryDetails.json');
-    return data[id as keyof typeof data] || null;
+    return data[id.toString() as keyof typeof data] || null;
   }
 
-  private async submitVote(voteData: any) {
+  private async submitVote(_voteData: any) {
     const { default: data } = await import('@/data/voteResponse.json');
     return data;
   }
